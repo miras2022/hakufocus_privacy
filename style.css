@@ -1,0 +1,34 @@
+:root{--bg:#f1f6f3;--paper:#fff;--ink:#1c2a26;--muted:#566862;--sage:#2b7352;--soft:#e0f0e7;--line:#d3e0d9;--mist:#e8f0ed;--warn:#fff6e0;--warnline:#e2b948}
+@media (prefers-color-scheme:dark){:root{--bg:#0e1614;--paper:#15201d;--ink:#e5eee9;--muted:#9db0a8;--sage:#86d4a9;--soft:#1b3329;--line:#26372f;--mist:#192622;--warn:#2b2412;--warnline:#9b7d27}}
+*{box-sizing:border-box}html{scroll-behavior:smooth;scroll-padding-top:1rem}
+body{margin:0;background:var(--bg);color:var(--ink);font:1.0625rem/1.7 Literata,Georgia,"Times New Roman",serif;-webkit-text-size-adjust:100%}
+h1,h2,h3,nav,table,.brand,.btn,.card,.meta{font-family:Figtree,"Segoe UI",system-ui,-apple-system,Roboto,sans-serif}
+a{color:var(--sage);text-underline-offset:3px}a:focus-visible,summary:focus-visible{outline:3px solid var(--sage);outline-offset:3px;border-radius:4px}
+.fog{background:radial-gradient(60rem 18rem at 12% -30%,rgba(136,201,161,.55),transparent 70%),radial-gradient(50rem 16rem at 90% 0,rgba(150,190,205,.40),transparent 70%),linear-gradient(var(--mist),var(--bg));border-bottom:1px solid var(--line);padding:1.1rem 1.25rem 2.6rem}
+.top{max-width:68rem;margin:0 auto;display:flex;justify-content:space-between;align-items:center;gap:1rem;flex-wrap:wrap}
+.brand{font-weight:700;font-size:1.2rem;color:var(--ink);text-decoration:none;letter-spacing:-.01em}
+.top nav a{margin-left:1.1rem;color:var(--ink);font-weight:500;font-size:.95rem}
+.hero{max-width:68rem;margin:2.4rem auto 0}
+h1{font-size:clamp(2rem,5vw,3rem);line-height:1.1;letter-spacing:-.025em;margin:0 0 .6rem;max-width:20ch}
+.meta{color:var(--muted);margin:0;font-size:.95rem}
+.wrap{max-width:68rem;margin:0 auto;padding:2rem 1.25rem 4rem;display:grid;grid-template-columns:14.5rem minmax(0,1fr);gap:3rem;align-items:start}
+.toc{position:sticky;top:1rem;font-size:.92rem}.toc strong{display:block;margin-bottom:.5rem}
+.toc ol{list-style:none;margin:0;padding:0;border-left:2px solid var(--line)}
+.toc a{display:block;padding:.28rem 0 .28rem .9rem;text-decoration:none;color:var(--muted)}.toc a:hover{color:var(--sage)}
+article{background:var(--paper);border:1px solid var(--line);border-radius:14px;padding:clamp(1.25rem,4vw,3rem);max-width:46rem}
+article h2{font-size:1.4rem;line-height:1.25;margin:2.6rem 0 .6rem;letter-spacing:-.01em}article h2:first-of-type{margin-top:0}
+article h3{font-size:1.05rem;margin:1.5rem 0 .3rem}p{margin:.6rem 0}ul,ol{padding-left:1.25rem}li{margin:.3rem 0}
+.glance{background:var(--soft);border-left:4px solid var(--sage);border-radius:0 10px 10px 0;padding:1rem 1.25rem;margin:0 0 2rem}
+.glance p:first-child{margin-top:0}.glance ul{margin:.3rem 0 0}
+.note{background:var(--warn);border-left:4px solid var(--warnline);border-radius:0 10px 10px 0;padding:.8rem 1.1rem;margin:1.2rem 0}
+.scroll{overflow-x:auto;margin:1rem 0;border:1px solid var(--line);border-radius:10px}
+table{border-collapse:collapse;width:100%;min-width:34rem;font-size:.92rem;line-height:1.5}
+th,td{text-align:left;vertical-align:top;padding:.65rem .8rem;border-bottom:1px solid var(--line)}
+th{background:var(--mist);font-weight:600}tr:last-child td{border-bottom:0}
+.cards{display:grid;grid-template-columns:repeat(auto-fit,minmax(16rem,1fr));gap:1rem;max-width:68rem;margin:-1.4rem auto 0;padding:0 1.25rem 3rem}
+.card{display:block;background:var(--paper);border:1px solid var(--line);border-radius:14px;padding:1.5rem;text-decoration:none;color:var(--ink)}
+.card:hover{border-color:var(--sage)}.card h2{margin:0 0 .4rem;font-size:1.3rem}.card p{margin:0;color:var(--muted);font-family:Literata,Georgia,serif;font-size:1rem}
+footer{max-width:68rem;margin:0 auto;padding:1.5rem 1.25rem 3rem;color:var(--muted);font:.9rem/1.6 Figtree,system-ui,sans-serif;border-top:1px solid var(--line)}
+@media (max-width:860px){.wrap{grid-template-columns:1fr;gap:1.2rem}.toc{position:static}.toc ol{columns:2}.top nav a:first-child{margin-left:0}}
+@media (max-width:520px){.toc ol{columns:1}body{font-size:1rem}}
+@media print{.fog nav,.toc{display:none}.wrap{display:block}article{border:0;padding:0}body{background:#fff;color:#000}}
